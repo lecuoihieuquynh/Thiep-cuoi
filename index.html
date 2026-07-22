@@ -63,29 +63,37 @@ z-index:99;
 
 .envelope{
 
-width:320px;
+width:340px;
+height:220px;
 
-height:210px;
+background:linear-gradient(145deg,#f9d5e3,#efb9cd);
 
-background:#F4C8D8;
-
-border-radius:12px;
+border-radius:18px;
 
 position:relative;
 
 cursor:pointer;
 
-box-shadow:0 20px 40px rgba(0,0,0,.15);
+box-shadow:
+0 25px 60px rgba(0,0,0,.20),
+0 8px 20px rgba(255,255,255,.35) inset;
 
-transition:.4s;
+transition:.35s;
+
+overflow:hidden;
 
 }
 
 .envelope:hover{
 
-transform:scale(1.04);
+transform:translateY(-8px) scale(1.03);
+
+box-shadow:
+0 35px 70px rgba(0,0,0,.25),
+0 8px 20px rgba(255,255,255,.4) inset;
 
 }
+
 
 .flap{
 
@@ -235,8 +243,8 @@ function openCard(){
 
 document.querySelector(".flap").style.transform="rotateX(180deg)";
 
-document.querySelector(".letter").style.transform="translateY(-90px)";
-
+document.querySelector(".letter").style.transform="translateY(-170px) scale(1.05)";
+document.querySelector(".letter").style.boxShadow="0 20px 40px rgba(0,0,0,.2)";
 setTimeout(()=>{
 
 document.getElementById("cover").style.opacity="0";
@@ -255,9 +263,9 @@ card.style.opacity="1";
 
 },100);
 
-},800);
+},500);
 
-},700);
+},1200);
 
 }
 
