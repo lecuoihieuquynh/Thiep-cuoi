@@ -4,8 +4,60 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Thiệp Cưới Hiếu & Quỳnh</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+/* Hoa đào */
 
+.flower{
+
+position:absolute;
+
+font-size:42px;
+
+opacity:.9;
+
+user-select:none;
+
+}
+
+.flower1{
+
+top:20px;
+
+left:20px;
+
+transform:rotate(-15deg);
+
+}
+
+.flower2{
+
+top:35px;
+
+left:75px;
+
+font-size:28px;
+
+}
+
+.flower3{
+
+bottom:20px;
+
+right:20px;
+
+transform:rotate(15deg);
+
+}
+
+.flower4{
+
+bottom:35px;
+
+right:75px;
+
+font-size:28px;
+
+}
 <style>
 
 *{
@@ -23,8 +75,7 @@ url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fi
 background-size:cover;
 background-position:center;
 
-font-family:Arial,sans-serif;
-
+font-family:'Cormorant Garamond',serif;
 height:100vh;
 
 overflow:hidden;
@@ -156,44 +207,49 @@ transition:1s;
 #card{
 
 display:none;
-
 opacity:0;
-
 transition:1s;
-
 text-align:center;
-
 width:90%;
+max-width:760px;
 
-max-width:700px;
+background:#FFFDFB;
 
-background:white;
+padding:70px 60px;
 
-padding:50px;
+border-radius:28px;
 
-border-radius:20px;
+border:1px solid #F3E7E2;
 
-box-shadow:0 20px 60px rgba(0,0,0,.18);
+box-shadow:0 25px 70px rgba(0,0,0,.18);
+
+position:relative;
 
 }
 
 #card h1{
 
-font-size:42px;
+font-family:'Great Vibes',cursive;
 
-color:#C16D89;
+font-size:78px;
 
-margin:15px 0;
+font-weight:400;
+
+color:#B88A76;
+
+margin:8px 0;
 
 }
 
 #card p{
 
-font-size:22px;
+font-size:24px;
 
-margin-top:20px;
+margin-top:25px;
 
-color:#666;
+color:#9C887B;
+
+letter-spacing:2px;
 
 }
 
@@ -226,7 +282,11 @@ Nhấn để mở thiệp
 </div>
 
 <div id="card">
+<div class="flower flower1">🌸</div>
+<div class="flower flower2">🌸</div>
 
+<div class="flower flower3">🌸</div>
+<div class="flower flower4">🌸</div>
 <h1>Phạm Minh Hiếu</h1>
 
 <div style="font-size:55px;margin:18px 0;">💍</div>
