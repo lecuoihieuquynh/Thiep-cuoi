@@ -3,18 +3,260 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Thiệp Cưới</title>
+
+<title>Thiệp Cưới Hiếu & Quỳnh</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:linear-gradient(135deg,#FFE7EE,#FFF7F8);
+
+font-family:Arial,sans-serif;
+
+height:100vh;
+
+overflow:hidden;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+/* Phong bì */
+
+#cover{
+
+position:fixed;
+
+width:100%;
+
+height:100%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:linear-gradient(135deg,#FFE7EE,#FFF8FB);
+
+transition:1s;
+
+z-index:99;
+
+}
+
+.envelope{
+
+width:320px;
+
+height:210px;
+
+background:#F4C8D8;
+
+border-radius:12px;
+
+position:relative;
+
+cursor:pointer;
+
+box-shadow:0 20px 40px rgba(0,0,0,.15);
+
+transition:.4s;
+
+}
+
+.envelope:hover{
+
+transform:scale(1.04);
+
+}
+
+.flap{
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+width:0;
+
+height:0;
+
+border-left:160px solid transparent;
+
+border-right:160px solid transparent;
+
+border-top:110px solid #F0AFC4;
+
+transform-origin:top;
+
+transition:1s;
+
+z-index:5;
+
+}
+
+.letter{
+
+position:absolute;
+
+left:15px;
+
+bottom:15px;
+
+width:290px;
+
+height:170px;
+
+background:white;
+
+border-radius:10px;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:22px;
+
+color:#B66A83;
+
+transition:1s;
+
+}
+
+#card{
+
+display:none;
+
+opacity:0;
+
+transition:1s;
+
+text-align:center;
+
+width:90%;
+
+max-width:700px;
+
+background:white;
+
+padding:50px;
+
+border-radius:20px;
+
+box-shadow:0 20px 60px rgba(0,0,0,.18);
+
+}
+
+#card h1{
+
+font-size:42px;
+
+color:#C16D89;
+
+margin:15px 0;
+
+}
+
+#card p{
+
+font-size:22px;
+
+margin-top:20px;
+
+color:#666;
+
+}
+
+</style>
+
 </head>
 
-<body style="background:#f9f3ed;font-family:Arial;text-align:center;padding:80px">
+<body>
 
-<h1>💍 Thiệp Cưới</h1>
+<div id="cover">
 
-<h2>Nguyễn Văn A ❤ Trần Thị B</h2>
+<div class="envelope" onclick="openCard()">
 
-<p>09.11.2025</p>
+<div class="flap"></div>
 
-<p>Website đang được xây dựng...</p>
+<div class="letter">
+
+💌
+
+<p style="margin-top:10px;font-size:18px">
+
+Nhấn để mở thiệp
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="card">
+
+<h1>Phạm Minh Hiếu</h1>
+
+<h2>❤️</h2>
+
+<h1>Lê Như Quỳnh</h1>
+
+<p>08 • 02 • 2026</p>
+
+</div>
+
+<script>
+
+function openCard(){
+
+document.querySelector(".flap").style.transform="rotateX(180deg)";
+
+document.querySelector(".letter").style.transform="translateY(-90px)";
+
+setTimeout(()=>{
+
+document.getElementById("cover").style.opacity="0";
+
+setTimeout(()=>{
+
+document.getElementById("cover").style.display="none";
+
+let card=document.getElementById("card");
+
+card.style.display="block";
+
+setTimeout(()=>{
+
+card.style.opacity="1";
+
+},100);
+
+},800);
+
+},700);
+
+}
+
+</script>
 
 </body>
 </html>
